@@ -42,6 +42,13 @@
             <artifactId>lombok</artifactId>
             <scope>annotationProcessor</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.10.2</version> <!-- 最新稳定版 -->
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
