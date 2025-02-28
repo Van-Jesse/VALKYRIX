@@ -1,9 +1,9 @@
-// Generated from C:/Users/fanmi/Downloads/ValkyrixRule.g4 by ANTLR 4.13.1
-package com.valkyrix.core.base;
+// Generated from C:/lab/RiskRule.g4 by ANTLR 4.13.1
+package com.valkyrix.parser;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
- * This class provides an empty implementation of {@link ValkyrixRuleVisitor},
+ * This class provides an empty implementation of {@link RiskRuleVisitor},
  * which can be extended to create a visitor which only needs to handle a subset
  * of the available methods.
  *
@@ -11,68 +11,68 @@ import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
  * operations with no return type.
  */
 @SuppressWarnings("CheckReturnValue")
-public class ValkyrixRuleBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements ValkyrixRuleVisitor<T> {
+public class RiskRuleBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements RiskRuleVisitor<T> {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpression(ValkyrixRuleParser.ExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpression(RiskRuleParser.ExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLogicalExpression(ValkyrixRuleParser.LogicalExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLogicalOr(RiskRuleParser.LogicalOrContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCompareExpression(ValkyrixRuleParser.CompareExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLogicalAnd(RiskRuleParser.LogicalAndContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAdditiveExpression(ValkyrixRuleParser.AdditiveExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitComparison(RiskRuleParser.ComparisonContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMultiplicativeExpression(ValkyrixRuleParser.MultiplicativeExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAdditive(RiskRuleParser.AdditiveContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParenExpression(ValkyrixRuleParser.ParenExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMultiplicative(RiskRuleParser.MultiplicativeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitVariableExpression(ValkyrixRuleParser.VariableExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPrimary(RiskRuleParser.PrimaryContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNumericLiteral(ValkyrixRuleParser.NumericLiteralContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIdentifierPath(RiskRuleParser.IdentifierPathContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStringLiteral(ValkyrixRuleParser.StringLiteralContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIdentifier(RiskRuleParser.IdentifierContext ctx) { return visitChildren(ctx); }
 }
