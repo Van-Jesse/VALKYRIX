@@ -27,6 +27,12 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-runtime</artifactId>
+            <version>4.13.1</version> <!-- 最新稳定版本 -->
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
@@ -46,6 +52,32 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.antlr</groupId>
+                <artifactId>antlr4-maven-plugin</artifactId>
+                <version>4.13.1</version> <!-- 与运行时版本一致 -->
+                <executions>
+                    <execution>
+                        <id>antlr</id>
+                        <goals>
+                            <goal>antlr4</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!-- 指定 .g4 文件路径（默认在 src/main/antlr4） -->
+                    <sourceDirectory>${project.basedir}/src/main/antlr4</sourceDirectory>
+                    <!-- 生成的代码输出目录 -->
+                    <outputDirectory>${project.build.directory}/generated-sources/antlr4</outputDirectory>
+                    <!-- 包名（根据你的项目修改） -->
+                    <arguments>
+                        -package com.valkyrix.parser
+                        -visitor  <!-- 生成 Visitor 接口 -->
+                        -no-listener <!-- 不生成 Listener -->
+                    </arguments>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 </project>
